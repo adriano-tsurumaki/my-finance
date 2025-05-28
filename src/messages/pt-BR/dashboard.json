@@ -1,0 +1,18 @@
+{
+    "title": "Painel de Controle",
+    "description": "Visão geral do sistema e acesso rápido às principais funcionalidades.",
+    "widgets": {
+        "system_status": "Status do Sistema",
+        "recent_activity": "Atividade Recente",
+        "user_stats": "Estatísticas de Usuários",
+        "system_notifications": "Notificações do Sistema"
+    },
+    "buttons": {
+        "view_details": "Ver Detalhes",
+        "refresh": "Atualizar"
+    },
+    "messages": {
+        "no_data_available": "Nenhum dado disponível no momento.",
+        "loading": "Carregando..."
+    }
+}
