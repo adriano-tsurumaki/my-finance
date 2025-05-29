@@ -6,6 +6,7 @@ import { SidebarProvider, SidebarTrigger, Sidebar, SidebarContent } from "@compo
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { loadMessages } from "@lib/loadMessages";
+import { ThemeProvider } from "@components/theme/theme-provider"
 
 const satoshiFont = localFont({
   src: [
@@ -78,21 +79,28 @@ export default async function RootLayout({
   const messages = await loadMessages(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${satoshiFont.className} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          <SidebarProvider>
-            <Sidebar>
-              <SidebarContent />
-            </Sidebar>
-            <main>
-              <SidebarTrigger />
-              {children}
-            </main>
-          </SidebarProvider>
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <SidebarProvider>
+              <Sidebar>
+                <SidebarContent />
+              </Sidebar>
+              <main>
+                <SidebarTrigger />
+                {children}
+              </main>
+            </SidebarProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
