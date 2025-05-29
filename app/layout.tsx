@@ -5,7 +5,7 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger, Sidebar, SidebarContent } from "@components/ui/sidebar"
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import { loadMessages } from "@/lib/loadMessages";
+import { loadMessages } from "@lib/loadMessages";
 
 const satoshiFont = localFont({
   src: [

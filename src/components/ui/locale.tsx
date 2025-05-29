@@ -4,7 +4,7 @@ import { startTransition } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "@components/ui/select";
 import { Locale } from '@i18n/config';
-import { setUserLocale } from "@/lib/locale";
+import { setUserLocale } from "@lib/locale";
 
 const locales = [
     { code: "en", label: "English" },

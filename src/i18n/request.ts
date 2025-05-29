@@ -1,5 +1,5 @@
-import { loadMessages } from '@/lib/loadMessages';
-import { getUserLocale } from '@/lib/locale';
+import { loadMessages } from '@lib/loadMessages';
+import { getUserLocale } from '@lib/locale';
 import { getRequestConfig } from 'next-intl/server';
 import { cookies } from 'next/headers';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import LocaleSelect from "@/src/components/ui/locale";
+import LocaleSelect from "@components/ui/locale";
 import { useTranslations } from "next-intl";
 
 export default function Teste() {
