@@ -2,6 +2,10 @@
   "name": "my-finance",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Adriano Tsurumaki",
+    "email": "adriano.tsurumaki@gmail.com"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -10,13 +14,17 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tooltip": "^1.2.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",
+    "motion": "^12.15.0",
     "next": "15.3.2",
+    "next-intl": "^4.1.0",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.3.0"

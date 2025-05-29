@@ -1,0 +1,18 @@
+{
+    "title": "Dashboard",
+    "description": "Overview of the system and quick access to main features.",
+    "widgets": {
+        "system_status": "System Status",
+        "recent_activity": "Recent Activity",
+        "user_stats": "User Statistics",
+        "system_notifications": "System Notifications"
+    },
+    "buttons": {
+        "view_details": "View Details",
+        "refresh": "Refresh"
+    },
+    "messages": {
+        "no_data_available": "No data available at the moment.",
+        "loading": "Loading..."
+    }
+}
