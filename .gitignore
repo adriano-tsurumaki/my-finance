@@ -57,5 +57,5 @@ server/TestResults/
 server/*.trx
 server/*.coverage
 server/*.coveragexml
-server/Migrations/*Designer.cs
-server/Migrations/*Snapshot.cs
+server/.terraform/
+server/.tools/
