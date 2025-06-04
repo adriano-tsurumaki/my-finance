@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:16
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: MyFinance
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 8a5si7y7uxsr88zr8jd3l98m
+    ports:
+      - "7231:5432" # outer:inner
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - myfinance-network
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: api
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=MyFinance;Username=postgres;Password=8a5si7y7uxsr88zr8jd3l98m"
+    networks:
+      - myfinance-network
+
+volumes:
+  pgdata:
+
+networks:
+  myfinance-network:
+    driver: bridge
