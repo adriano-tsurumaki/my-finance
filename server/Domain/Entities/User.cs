@@ -1,3 +1,5 @@
+using server.Domain.Enums;
+
 namespace server.Domain.Entities;
 
 public class User : AuditableEntity
@@ -7,7 +9,7 @@ public class User : AuditableEntity
     public string Name { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
-    public string Role { get; set; } = "User";
+    public UserRole Role { get; set; } = UserRole.User;
     public DateTime? LastLogin { get; set; } = null;
     public bool IsActive { get; set; } = true;
     public string Locale { get; set; } = "en-US";
