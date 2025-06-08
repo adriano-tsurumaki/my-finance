@@ -1,6 +1,7 @@
 ﻿using server.Application.Auth.Commands;
 using server.Application.Transactions.Commands;
 using server.Infrastructure.Interfaces;
+using server.Infrastructure.Persistence.Interceptors;
 using server.Infrastructure.Persistence.Repositories;
 using server.Infrastructure.Security;
 using server.Repositories.Interfaces;
@@ -11,6 +12,8 @@ public static class DependecyInjection
 {
     public static IServiceCollection AddDependencies(this IServiceCollection services)
     {
+        services.AddScoped<AuditInterceptor>();
+
         //Repositories
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ITransactionRepository, TransactionRepository>();
