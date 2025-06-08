@@ -11,8 +11,12 @@ public class TransactionConfiguration : IEntityTypeConfiguration<Transaction>
         builder.HasKey(e => e.Id);
         builder.HasIndex(e => e.TransactionId).IsUnique();
 
-        builder.Property(e => e.PaymentMethod).HasMaxLength(50);
         builder.Property(e => e.Amount).HasColumnType("decimal(18,2)");
+
+        builder.HasOne(e => e.PaymentMethod)
+               .WithMany(pm => pm.Transactions)
+               .HasForeignKey(e => e.PaymentMethodId)
+               .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(e => e.User)
                .WithMany(u => u.Transactions)

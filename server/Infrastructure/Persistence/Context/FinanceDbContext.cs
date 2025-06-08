@@ -8,13 +8,13 @@ public class FinanceDbContext(DbContextOptions<FinanceDbContext> options) : DbCo
 {
     public DbSet<User> Users => Set<User>();
     public DbSet<Transaction> Transactions => Set<Transaction>();
+    public DbSet<PaymentMethod> PaymentMethods => Set<PaymentMethod>();
     public DbSet<TransactionItem> TransactionItems => Set<TransactionItem>();
     public DbSet<Tag> Tags => Set<Tag>();
     public DbSet<TransactionTag> TransactionTags => Set<TransactionTag>();
     public DbSet<Recurrence> Recurrences => Set<Recurrence>();
     public DbSet<InstallmentPlan> InstallmentPlans => Set<InstallmentPlan>();
     public DbSet<Category> Categories => Set<Category>();
-
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -17,6 +17,7 @@ public static class DependecyInjection
         //Repositories
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ITransactionRepository, TransactionRepository>();
+        services.AddScoped<IPaymentMethodRepository, PaymentMethodRepository>();
 
         //Securities
         services.AddScoped<IPasswordHasher, PasswordHasher>();

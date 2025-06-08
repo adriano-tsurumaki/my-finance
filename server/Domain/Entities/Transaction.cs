@@ -6,16 +6,18 @@ public class Transaction : AuditableEntity
 {
     public long Id { get; set; }
     public Guid TransactionId { get; set; }
-    
-    public string PaymentMethod { get; set; } = string.Empty; // e.g., "Credit Card", "PayPal"
+
     public decimal Amount { get; set; }
     public DateTime PaymentDate { get; set; }
 
     public TransactionType TransactionType { get; set; }
     public TransactionStatus Status { get; set; }
 
+    public long PaymentMethodId { get; set; }
+    public PaymentMethod? PaymentMethod { get; set; }
+
     public long UserId { get; set; }
-    public User User { get; set; } = null!;
+    public User? User { get; set; }
 
     public long? RecurrenceId { get; set; }
     public Recurrence? Recurrence { get; set; }
