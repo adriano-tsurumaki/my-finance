@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using server.Domain.Entities;
-using server.Domain.Enums;
-using server.Infrastructure.Interfaces;
-using server.Infrastructure.Persistence.Context;
+using api.Domain.Entities;
+using api.Domain.Enums;
+using api.Infrastructure.Interfaces;
+using api.Infrastructure.Persistence.Context;
 
-namespace server.Infrastructure.Persistence.Repositories;
+namespace api.Infrastructure.Persistence.Repositories;
 
 public class PaymentMethodRepository(FinanceDbContext financeDbContext) : IPaymentMethodRepository
 {

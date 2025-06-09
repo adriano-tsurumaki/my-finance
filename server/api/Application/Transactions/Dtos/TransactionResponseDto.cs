@@ -1,4 +1,4 @@
-﻿namespace server.Application.Transactions.Dtos;
+﻿namespace api.Application.Transactions.Dtos;
 
 public class TransactionResponseDto
 {

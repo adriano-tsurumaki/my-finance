@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using server.Domain.Entities;
+using api.Domain.Entities;
 
-namespace server.Infrastructure.Persistence.Interceptors;
+namespace api.Infrastructure.Persistence.Interceptors;
 
 public class AuditInterceptor : SaveChangesInterceptor
 {

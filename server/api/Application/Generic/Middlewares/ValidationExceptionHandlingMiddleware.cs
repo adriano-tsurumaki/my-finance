@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 
-namespace server.Application.Generic.Middlewares;
+namespace api.Application.Generic.Middlewares;
 
 public sealed class ValidationExceptionHandlingMiddleware(RequestDelegate next)
 {

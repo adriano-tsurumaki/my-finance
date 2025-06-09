@@ -1,11 +1,11 @@
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using server;
-using server.Application.Generic.Middlewares;
-using server.Application.Transactions.Validators;
-using server.Infrastructure.Persistence.Context;
-using server.Infrastructure.Persistence.Interceptors;
+using api;
+using api.Application.Generic.Middlewares;
+using api.Application.Transactions.Validators;
+using api.Infrastructure.Persistence.Context;
+using api.Infrastructure.Persistence.Interceptors;
 
 var builder = WebApplication.CreateBuilder(args);
 

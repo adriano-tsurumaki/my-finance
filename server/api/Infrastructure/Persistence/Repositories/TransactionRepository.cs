@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using server.Domain.Entities;
-using server.Infrastructure.Persistence.Context;
-using server.Repositories.Interfaces;
+using api.Domain.Entities;
+using api.Infrastructure.Persistence.Context;
+using api.Repositories.Interfaces;
 
-namespace server.Infrastructure.Persistence.Repositories;
+namespace api.Infrastructure.Persistence.Repositories;
 
 public class TransactionRepository(FinanceDbContext context) : ITransactionRepository
 {

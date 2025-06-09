@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using server.Domain.Entities;
+using api.Domain.Entities;
 
-namespace server.Infrastructure.Persistence.Mappings;
+namespace api.Infrastructure.Persistence.Mappings;
 
 public class PaymentMethodConfiguration : IEntityTypeConfiguration<PaymentMethod>
 {

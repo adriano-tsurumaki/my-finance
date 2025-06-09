@@ -1,4 +1,4 @@
-﻿namespace server.Domain.Entities;
+﻿namespace api.Domain.Entities;
 
 public class InstallmentPlan : AuditableEntity
 {

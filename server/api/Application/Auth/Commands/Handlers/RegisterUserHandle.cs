@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using server.Domain.Entities;
-using server.Infrastructure.Interfaces;
+using api.Domain.Entities;
+using api.Infrastructure.Interfaces;
 
-namespace server.Application.Auth.Commands.Handlers;
+namespace api.Application.Auth.Commands.Handlers;
 
 public class RegisterUserHandle(IUserRepository userRepository, IPasswordHasher passwordHasher) : IRequestHandler<RegisterUserCommand, bool>
 {

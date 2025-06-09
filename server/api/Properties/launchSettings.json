@@ -17,19 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "useSSL": true,
-      "publishAllPorts": false,
-      "ports": [
-        {
-          "containerPort": 8080,
-          "hostPort": 8080,
-          "protocol": "http"
-        },
-        {
-          "containerPort": 8081,
-          "hostPort": 8081,
-          "protocol": "https"
-        }
-      ]
+      "publishAllPorts": false
     }
   }
 }

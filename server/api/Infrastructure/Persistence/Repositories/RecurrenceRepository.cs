@@ -1,8 +1,8 @@
-﻿using server.Domain.Entities;
-using server.Infrastructure.Interfaces;
-using server.Infrastructure.Persistence.Context;
+﻿using api.Domain.Entities;
+using api.Infrastructure.Interfaces;
+using api.Infrastructure.Persistence.Context;
 
-namespace server.Infrastructure.Persistence.Repositories;
+namespace api.Infrastructure.Persistence.Repositories;
 
 public class RecurrenceRepository(FinanceDbContext financeDbContext) : IRecurrenceRepository
 {

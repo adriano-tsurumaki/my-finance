@@ -1,7 +1,7 @@
-﻿using server.Application.Transactions.Dtos;
-using server.Domain.Entities;
+﻿using api.Application.Transactions.Dtos;
+using api.Domain.Entities;
 
-namespace server.Application.Transactions.Mappers;
+namespace api.Application.Transactions.Mappers;
 
 public static class TransactionMapper
 {

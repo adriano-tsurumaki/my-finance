@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using server.Domain.Entities;
+using api.Domain.Entities;
 
-namespace server.Infrastructure.Persistence.Mappings;
+namespace api.Infrastructure.Persistence.Mappings;
 
 public class TransactionItemConfiguration : IEntityTypeConfiguration<TransactionItem>
 {

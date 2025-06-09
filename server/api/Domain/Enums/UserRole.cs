@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace server.Domain.Enums;
+namespace api.Domain.Enums;
 
 public enum UserRole
 {

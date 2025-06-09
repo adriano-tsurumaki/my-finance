@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using server.Domain.Entities;
-using server.Infrastructure.Persistence.Mappings;
+using api.Domain.Entities;
+using api.Infrastructure.Persistence.Mappings;
 
-namespace server.Infrastructure.Persistence.Context;
+namespace api.Infrastructure.Persistence.Context;
 
 public class FinanceDbContext(DbContextOptions<FinanceDbContext> options) : DbContext(options)
 {

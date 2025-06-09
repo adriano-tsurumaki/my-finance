@@ -1,5 +1,5 @@
 ﻿using MediatR;
 
-namespace server.Application.Transactions.Commands;
+namespace api.Application.Transactions.Commands;
 
 public record DeleteTransactionCommand(Guid Id) : IRequest;

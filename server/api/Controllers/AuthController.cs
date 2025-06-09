@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using server.Application.Auth.Commands;
-using server.Application.Auth.Dto;
+using api.Application.Auth.Commands;
+using api.Application.Auth.Dto;
 
-namespace server.Controllers
+namespace api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

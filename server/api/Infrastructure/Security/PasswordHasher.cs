@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using server.Infrastructure.Interfaces;
+using api.Infrastructure.Interfaces;
 
-namespace server.Infrastructure.Security;
+namespace api.Infrastructure.Security;
 
 public class PasswordHasher : IPasswordHasher
 {

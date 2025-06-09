@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using server.Domain.Entities;
-using server.Domain.Enums;
+using api.Domain.Entities;
+using api.Domain.Enums;
 
-namespace server.Infrastructure.Persistence.Mappings;
+namespace api.Infrastructure.Persistence.Mappings;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {

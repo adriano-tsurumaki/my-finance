@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using server.Application.Auth.Dto;
+using api.Application.Auth.Dto;
 
-namespace server.Application.Auth.Commands;
+namespace api.Application.Auth.Commands;
 
 public record RegisterUserCommand(RegisterUserDto User) : IRequest<bool>;

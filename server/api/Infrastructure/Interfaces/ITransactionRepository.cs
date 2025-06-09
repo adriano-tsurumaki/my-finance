@@ -1,6 +1,6 @@
-﻿using server.Domain.Entities;
+﻿using api.Domain.Entities;
 
-namespace server.Repositories.Interfaces;
+namespace api.Repositories.Interfaces;
 
 public interface ITransactionRepository
 {

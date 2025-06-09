@@ -1,13 +1,13 @@
-﻿using server.Application.Auth.Commands;
-using server.Application.Generic.Validators;
-using server.Application.Transactions.Commands;
-using server.Infrastructure.Interfaces;
-using server.Infrastructure.Persistence.Interceptors;
-using server.Infrastructure.Persistence.Repositories;
-using server.Infrastructure.Security;
-using server.Repositories.Interfaces;
+﻿using api.Application.Auth.Commands;
+using api.Application.Generic.Validators;
+using api.Application.Transactions.Commands;
+using api.Infrastructure.Interfaces;
+using api.Infrastructure.Persistence.Interceptors;
+using api.Infrastructure.Persistence.Repositories;
+using api.Infrastructure.Security;
+using api.Repositories.Interfaces;
 
-namespace server;
+namespace api;
 
 public static class DependecyInjection
 {

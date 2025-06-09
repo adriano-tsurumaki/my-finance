@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using server.Application.Auth.Dto;
-using server.Domain.Enums;
-using server.Infrastructure.Interfaces;
-using server.Infrastructure.Security;
+using api.Application.Auth.Dto;
+using api.Domain.Enums;
+using api.Infrastructure.Interfaces;
+using api.Infrastructure.Security;
 
-namespace server.Application.Auth.Commands.Handlers;
+namespace api.Application.Auth.Commands.Handlers;
 
 public class LoginUserHandler : IRequestHandler<LoginUserCommand, LoginResponseDto>
 {

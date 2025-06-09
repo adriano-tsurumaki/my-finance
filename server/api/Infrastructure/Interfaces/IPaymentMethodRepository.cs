@@ -1,7 +1,7 @@
-﻿using server.Domain.Entities;
-using server.Domain.Enums;
+﻿using api.Domain.Entities;
+using api.Domain.Enums;
 
-namespace server.Infrastructure.Interfaces;
+namespace api.Infrastructure.Interfaces;
 
 public interface IPaymentMethodRepository
 {

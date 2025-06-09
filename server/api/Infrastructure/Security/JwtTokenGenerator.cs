@@ -1,12 +1,12 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using server.Domain.Entities;
-using server.Domain.Enums;
-using server.Infrastructure.Interfaces;
+using api.Domain.Entities;
+using api.Domain.Enums;
+using api.Infrastructure.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace server.Infrastructure.Security;
+namespace api.Infrastructure.Security;
 
 public class JwtTokenGenerator : IJwtTokenGenerator
 {

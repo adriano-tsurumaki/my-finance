@@ -1,6 +1,6 @@
-﻿using server.Domain.Enums;
+﻿using api.Domain.Enums;
 
-namespace server.Domain.Entities;
+namespace api.Domain.Entities;
 
 public class Transaction : AuditableEntity
 {

@@ -1,10 +1,10 @@
 ﻿using MediatR;
-using server.Application.Exceptions;
-using server.Application.Transactions.Dtos;
-using server.Application.Transactions.Mappers;
-using server.Repositories.Interfaces;
+using api.Application.Exceptions;
+using api.Application.Transactions.Dtos;
+using api.Application.Transactions.Mappers;
+using api.Repositories.Interfaces;
 
-namespace server.Application.Transactions.Queries.Handlers;
+namespace api.Application.Transactions.Queries.Handlers;
 
 public class GetTransactionByIdHandler(ITransactionRepository repository) : IRequestHandler<GetTransactionByIdQuery, TransactionResponseDto>
 {

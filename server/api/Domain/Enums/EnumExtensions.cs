@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Reflection;
 
-namespace server.Domain.Enums;
+namespace api.Domain.Enums;
 
 public static class EnumExtensions
 {

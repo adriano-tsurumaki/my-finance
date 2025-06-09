@@ -1,4 +1,4 @@
-﻿namespace server.Domain.Enums;
+﻿namespace api.Domain.Enums;
 
 public enum RecurrenceFrequency
 {

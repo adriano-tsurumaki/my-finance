@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using server.Application.Transactions.Dtos;
+using api.Application.Transactions.Dtos;
 
-namespace server.Application.Transactions.Validators;
+namespace api.Application.Transactions.Validators;
 
 public class TransactionItemInputDtoValidator : AbstractValidator<TransactionItemInputDto>
 {

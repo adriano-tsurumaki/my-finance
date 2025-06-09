@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using server.Application.Transactions.Commands;
+using api.Application.Transactions.Commands;
 
-namespace server.Application.Transactions.Validators;
+namespace api.Application.Transactions.Validators;
 
 public class CreateTransactionCommandValidator : AbstractValidator<CreateTransactionCommand>
 {

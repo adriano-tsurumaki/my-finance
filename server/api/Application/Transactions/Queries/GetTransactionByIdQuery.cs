@@ -1,6 +1,6 @@
 ﻿using MediatR;
-using server.Application.Transactions.Dtos;
+using api.Application.Transactions.Dtos;
 
-namespace server.Application.Transactions.Queries;
+namespace api.Application.Transactions.Queries;
 
 public record GetTransactionByIdQuery(Guid Id) : IRequest<TransactionResponseDto>;

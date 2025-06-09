@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using server.Application.Transactions.Dtos;
+using api.Application.Transactions.Dtos;
 
-namespace server.Application.Transactions.Commands;
+namespace api.Application.Transactions.Commands;
 
 public record UpdateTransactionCommand(
     Guid Id,

@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
 using MediatR;
-using server.Application.Transactions.Dtos;
-using server.Domain.Entities;
-using server.Infrastructure.Interfaces;
-using server.Repositories.Interfaces;
+using api.Application.Transactions.Dtos;
+using api.Domain.Entities;
+using api.Infrastructure.Interfaces;
+using api.Repositories.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
-namespace server.Application.Transactions.Commands.Handlers;
+namespace api.Application.Transactions.Commands.Handlers;
 
 public class CreateTransactionHandler(
     ITransactionRepository repository, 

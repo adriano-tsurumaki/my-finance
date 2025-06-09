@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using server.Application.Transactions.Dtos;
-using server.Domain.Enums;
+using api.Application.Transactions.Dtos;
+using api.Domain.Enums;
 
-namespace server.Application.Transactions.Commands;
+namespace api.Application.Transactions.Commands;
 
 public record class CreateTransactionCommand : IRequest<TransactionResponseDto>
 {

@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using server.Application.Transactions.Commands;
-using server.Application.Transactions.Queries;
+using api.Application.Transactions.Commands;
+using api.Application.Transactions.Queries;
 using System.Security.Claims;
 
-namespace server.Controllers;
+namespace api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
