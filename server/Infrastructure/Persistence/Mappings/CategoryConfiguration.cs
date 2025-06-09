@@ -8,12 +8,17 @@ public class CategoryConfiguration : IEntityTypeConfiguration<Category>
 {
     public void Configure(EntityTypeBuilder<Category> builder)
     {
-        builder.HasKey(e => e.Id);
-        builder.HasIndex(e => e.CategoryId).IsUnique();
+        builder.HasKey(c => c.Id);
+        builder.HasIndex(c => c.CategoryId).IsUnique();
 
-        builder.Property(e => e.Name).IsRequired().HasMaxLength(50);
+        builder.Property(c => c.Name).IsRequired().HasMaxLength(50);
 
-        builder.HasMany(e => e.Transactions)
+        builder.HasOne(c => c.User)
+               .WithMany(u => u.Categories)
+               .HasForeignKey(c => c.UserId)
+               .OnDelete(DeleteBehavior.SetNull);
+
+        builder.HasMany(c => c.Transactions)
                .WithOne(t => t.Category)
                .HasForeignKey(t => t.CategoryId);
     }

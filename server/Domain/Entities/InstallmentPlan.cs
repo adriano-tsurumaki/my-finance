@@ -11,4 +11,5 @@ public class InstallmentPlan : AuditableEntity
     public int IntervalInMonths { get; set; }
 
     public ICollection<Transaction> Transactions { get; set; } = [];
+    public ICollection<TransactionItem> TransactionItems { get; set; } = [];
 }

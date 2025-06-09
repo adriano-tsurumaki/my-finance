@@ -12,7 +12,7 @@ public class PaymentMethodConfiguration : IEntityTypeConfiguration<PaymentMethod
         
         builder.HasIndex(e => e.PaymentMethodId).IsUnique();
         
-        builder.Property(e => e.Description)
+        builder.Property(e => e.Name)
             .IsRequired()
             .HasMaxLength(100);
 

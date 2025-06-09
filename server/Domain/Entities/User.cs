@@ -15,5 +15,6 @@ public class User : AuditableEntity
     public string Locale { get; set; } = "en-US";
     public string TimeZone { get; set; } = "UTC";
 
+    public ICollection<Category>? Categories { get; set; }
     public ICollection<Transaction> Transactions { get; set; } = [];
 }

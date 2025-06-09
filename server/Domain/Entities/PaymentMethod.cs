@@ -6,7 +6,7 @@ public class PaymentMethod : AuditableEntity
 {
     public long Id { get; set; }
     public Guid PaymentMethodId { get; set; }
-    public string Description { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
     public string Locale { get; set; } = string.Empty;
     public PaymentMethodType Identifier { get; set; }
 

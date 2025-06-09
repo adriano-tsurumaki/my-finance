@@ -16,5 +16,15 @@ public class TransactionItemConfiguration : IEntityTypeConfiguration<Transaction
         builder.Property(e => e.UnitPrice).HasColumnType("decimal(18,2)");
         builder.Property(e => e.UnitOfMeasure).HasMaxLength(20);
         builder.Ignore(e => e.Total);
+
+        builder.HasOne(e => e.Transaction)
+               .WithMany(t => t.TransactionItems)
+               .HasForeignKey(e => e.TransactionId)
+               .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(e => e.InstallmentPlan)
+               .WithMany(i => i.TransactionItems)
+               .HasForeignKey(e => e.InstallmentPlanId)
+               .OnDelete(DeleteBehavior.Restrict);
     }
 }

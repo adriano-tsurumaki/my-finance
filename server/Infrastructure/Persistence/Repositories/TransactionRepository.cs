@@ -14,9 +14,15 @@ public class TransactionRepository(FinanceDbContext context) : ITransactionRepos
         return await _context.Transactions.ToListAsync();
     }
 
-    public async Task<Transaction?> GetByIdAsync(long id)
+    public async Task<Transaction?> GetByIdAsync(Guid id)
     {
         return await _context.Transactions
-            .FirstOrDefaultAsync(t => t.Id == id);
+            .FirstOrDefaultAsync(t => t.TransactionId == id);
+    }
+
+    public async Task AddAsync(Transaction transaction)
+    {
+        await _context.Transactions.AddAsync(transaction);
+        await _context.SaveChangesAsync();
     }
 }

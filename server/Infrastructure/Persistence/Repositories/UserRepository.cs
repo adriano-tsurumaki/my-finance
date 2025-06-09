@@ -15,6 +15,11 @@ public class UserRepository(FinanceDbContext context) : IUserRepository
         await _context.SaveChangesAsync();
     }
 
+    public Task<User?> GetByIdAsync(Guid id)
+    {
+        return _context.Users.FirstOrDefaultAsync(u => u.UserId == id);
+    }
+
     public Task<User?> GetByEmailAsync(string email)
     {
         return _context.Users.FirstOrDefaultAsync(u => u.Email == email);
