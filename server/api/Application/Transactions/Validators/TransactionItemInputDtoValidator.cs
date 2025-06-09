@@ -16,7 +16,7 @@ public class TransactionItemInputDtoValidator : AbstractValidator<TransactionIte
 
         RuleFor(x => x.UnitOfMeasure)
             .NotEmpty().WithMessage("Unit of measure is required.")
-            .MaximumLength(50).WithMessage("Unit of measure must not exceed 50 characters.");
+            .MaximumLength(20).WithMessage("Unit of measure must not exceed 20 characters.");
 
         RuleFor(x => x.UnitPrice)
             .GreaterThanOrEqualTo(0).WithMessage("Unit price must be zero or greater.");
