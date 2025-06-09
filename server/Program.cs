@@ -1,6 +1,9 @@
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using server;
+using server.Application.Generic.Middlewares;
+using server.Application.Transactions.Validators;
 using server.Infrastructure.Persistence.Context;
 using server.Infrastructure.Persistence.Interceptors;
 
@@ -10,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDependencies();
 builder.Services.AddMediators();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateTransactionCommandValidator>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -74,6 +78,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<ValidationExceptionHandlingMiddleware>();
 
 app.MapControllers();
 

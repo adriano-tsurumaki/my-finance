@@ -1,4 +1,5 @@
 ﻿using server.Application.Auth.Commands;
+using server.Application.Generic.Validators;
 using server.Application.Transactions.Commands;
 using server.Infrastructure.Interfaces;
 using server.Infrastructure.Persistence.Interceptors;
@@ -31,8 +32,13 @@ public static class DependecyInjection
 
     public static IServiceCollection AddMediators(this IServiceCollection services)
     {
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(RegisterUserCommand).Assembly));
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(CreateTransactionCommand).Assembly));
+        services.AddMediatR(cfg =>
+        {
+            cfg.RegisterServicesFromAssembly(typeof(RegisterUserCommand).Assembly);
+            cfg.RegisterServicesFromAssembly(typeof(CreateTransactionCommand).Assembly);
+            
+            cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
+        });
 
         return services;
     }
