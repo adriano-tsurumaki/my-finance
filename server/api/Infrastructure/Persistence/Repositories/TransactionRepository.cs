@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using api.Domain.Entities;
 using api.Infrastructure.Persistence.Context;
-using api.Repositories.Interfaces;
+using api.Infrastructure.Interfaces;
 
 namespace api.Infrastructure.Persistence.Repositories;
 

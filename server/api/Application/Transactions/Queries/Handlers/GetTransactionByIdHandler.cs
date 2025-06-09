@@ -2,7 +2,7 @@
 using api.Application.Exceptions;
 using api.Application.Transactions.Dtos;
 using api.Application.Transactions.Mappers;
-using api.Repositories.Interfaces;
+using api.Infrastructure.Interfaces;
 
 namespace api.Application.Transactions.Queries.Handlers;
 

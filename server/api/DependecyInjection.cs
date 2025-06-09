@@ -5,7 +5,6 @@ using api.Infrastructure.Interfaces;
 using api.Infrastructure.Persistence.Interceptors;
 using api.Infrastructure.Persistence.Repositories;
 using api.Infrastructure.Security;
-using api.Repositories.Interfaces;
 
 namespace api;
 

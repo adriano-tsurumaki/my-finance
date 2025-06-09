@@ -3,7 +3,6 @@ using MediatR;
 using api.Application.Transactions.Dtos;
 using api.Domain.Entities;
 using api.Infrastructure.Interfaces;
-using api.Repositories.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
 namespace api.Application.Transactions.Commands.Handlers;

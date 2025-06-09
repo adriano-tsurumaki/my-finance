@@ -1,6 +1,6 @@
 ﻿using api.Domain.Entities;
 
-namespace api.Repositories.Interfaces;
+namespace api.Infrastructure.Interfaces;
 
 public interface ITransactionRepository
 {
