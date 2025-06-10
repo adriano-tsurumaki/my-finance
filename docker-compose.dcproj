@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.Docker.Sdk">
+  <PropertyGroup>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>{FD1D4E4E-EB70-4D1C-B18F-CED6AFB4FEE9}</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceName>api</DockerServiceName>
+    <DockerfileContext>server</DockerfileContext>
+    <ProjectVersion>2.1</ProjectVersion>
+	<ComposeProjectName>my-finance</ComposeProjectName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".\docker-compose.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

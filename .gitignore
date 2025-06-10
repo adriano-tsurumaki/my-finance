@@ -37,6 +37,8 @@ client/.yarn/*
 !client/.yarn/versions
 
 # ========== SERVER (.NET WebApi) ==========
+obj/
+.vs/
 server/.vs/
 server/api/bin/
 server/api/obj/
