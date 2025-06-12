@@ -1,41 +1,85 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# ========== GLOBAL ==========
 .DS_Store
+Thumbs.db
+*.log
+*.bak
+*.sql
 *.pem
+*.env*
+*.dbmdl
+secrets.json
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# IDEs
+.vscode/
+.idea/
 
-# env files (can opt-in for committing if needed)
-.env*
+# ========== CLIENT (Next.js) ==========
+client/node_modules/
+client/.next/
+client/.pnp/
+client/.pnp.*
+client/.env*
+client/.vercel
+client/coverage/
+client/.turbo/
+client/out/
+client/build/
+client/*.tsbuildinfo
+client/next-env.d.ts
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/.pnpm-debug.log*
+client/.yarn/*
+!client/.yarn/patches
+!client/.yarn/plugins
+!client/.yarn/releases
+!client/.yarn/versions
 
-# vercel
-.vercel
+# ========== SERVER (.NET WebApi) ==========
+obj/
+.vs/
+server/.vs/
+server/api/bin/
+server/api/obj/
+server/api/*.user
+server/api/*.suo
+server/api/*.userosscache
+server/api/*.sln.docstates
+server/api/ScaffoldingReadMe.txt
+server/api/*.publish/
+server/api/*.nupkg
+server/api/*.snupkg
+server/api/packages/
+server/api/.nuget/
+server/api/artifacts/
+server/api/project.lock.json
+server/api/project.fragment.lock.json
+server/api/TestResults/
+server/api/*.trx
+server/api/*.coverage
+server/api/*.coveragexml
+server/api/.terraform/
+server/api/.tools/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+server/tests/*/bin/
+server/tests/*/obj/
+server/tests/*/*.user
+server/tests/*/*.suo
+server/tests/*/*.userosscache
+server/tests/*/*.sln.docstates
+server/tests/*/ScaffoldingReadMe.txt
+server/tests/*/*.publish/
+server/tests/*/*.nupkg
+server/tests/*/*.snupkg
+server/tests/*/packages/
+server/tests/*/.nuget/
+server/tests/*/artifacts/
+server/tests/*/project.lock.json
+server/tests/*/project.fragment.lock.json
+server/tests/*/TestResults/
+server/tests/*/*.trx
+server/tests/*/*.coverage
+server/tests/*/*.coveragexml
+server/tests/*/.terraform/
+server/tests/*/.tools/
