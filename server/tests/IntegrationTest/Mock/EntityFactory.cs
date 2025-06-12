@@ -12,6 +12,7 @@ public static class EntityFactory
             Type t when t == typeof(Category) => (IEntityFactory<T>)new CategoryFactory(),
             Type t when t == typeof(Transaction) => (IEntityFactory<T>)new TransactionFactory(),
             Type t when t == typeof(PaymentMethod) => (IEntityFactory<T>)new PaymentMethodFactory(),
+            Type t when t == typeof(InstallmentPlan) => (IEntityFactory<T>)new InstallmentPlanFactory(),
             Type t when t == typeof(TransactionItem) => (IEntityFactory<T>)new TransactionItemFactory(),
             _ => throw new NotSupportedException($"No factory available for type {typeof(T).Name}")
         };

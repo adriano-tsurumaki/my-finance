@@ -8,13 +8,9 @@ using Microsoft.EntityFrameworkCore;
 namespace IntegrationTest;
 
 [Collection("Integration Tests")]
-public class TransactionPersistenceTests(TestContainerFixture fixture)
+public class TransactionPersistenceTests(TestContainerFixture fixture) : BasePersistenceTests
 {
     private readonly TestContainerFixture _fixture = fixture;
-
-    private static T Create<T>() where T : class, new() => EntityFactory.Generate<T>().Create();
-
-    private static Func<Task> SaveFn(FinanceDbContext context) => () => context.SaveChangesAsync();
 
     [Fact]
     public async Task Should_not_save_transaction_without_required_relationships()
@@ -104,30 +100,6 @@ public class TransactionPersistenceTests(TestContainerFixture fixture)
         transaction.CategoryId = -1;
 
         await context.Transactions.AddAsync(transaction);
-        await SaveFn(context).Should().ThrowAsync<DbUpdateException>();
-    }
-
-    [Fact]
-    public async Task Should_throw_when_transaction_item_has_invalid_transaction()
-    {
-        using var context = await _fixture.CreateNewDbContext();
-
-        var transactionItem = Create<TransactionItem>();
-        transactionItem.TransactionId = -1;
-
-        await context.TransactionItems.AddAsync(transactionItem);
-        await SaveFn(context).Should().ThrowAsync<DbUpdateException>();
-    }
-
-    [Fact]
-    public async Task Should_throw_when_transaction_item_has_invalid_installment_plan()
-    {
-        using var context = await _fixture.CreateNewDbContext();
-
-        var transactionItem = Create<TransactionItem>();
-        transactionItem.InstallmentPlanId = -1;
-
-        await context.TransactionItems.AddAsync(transactionItem);
         await SaveFn(context).Should().ThrowAsync<DbUpdateException>();
     }
 
