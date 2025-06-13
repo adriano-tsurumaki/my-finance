@@ -10,7 +10,7 @@ public class UserFactory : IEntityFactory<User>
         {
             UserId = Guid.NewGuid(),
             Name = "User",
-            Email = "user@example.com",
+            Email = $"user{Guid.NewGuid()}@example.com",
             Password = "123",
             Role = api.Domain.Enums.UserRole.User,
             LastLogin = null,
