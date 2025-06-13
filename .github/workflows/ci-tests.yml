@@ -47,6 +47,12 @@ jobs:
           name: unit-test-coverage
           path: ./server/tests/UnitTest/TestResults/coverage.xml
 
+      - name: 📥 Upload to Codecov
+        run: |
+          bash <(curl -s https://codecov.io/bash) -f ./server/tests/UnitTest/TestResults/coverage.xml
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
   integration-tests:
     name: 🔁 Integration Tests
     runs-on: ubuntu-latest
@@ -87,3 +93,9 @@ jobs:
         with:
           name: integration-test-coverage
           path: ./server/tests/IntegrationTest/TestResults/coverage.xml
+      
+      - name: 📥 Upload to Codecov
+        run: |
+          bash <(curl -s https://codecov.io/bash) -f ./server/tests/IntegrationTest/TestResults/coverage.xml
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
