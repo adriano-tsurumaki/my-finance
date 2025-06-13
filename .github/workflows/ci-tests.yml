@@ -26,12 +26,19 @@ jobs:
       - name: 🛠️ Build solution
         run: dotnet build ./server/api/api.csproj --configuration Release --no-restore
 
+      - name: 📦 Build Unit Test Project
+        run: dotnet build ./server/tests/UnitTest/UnitTest.csproj --configuration Release
+
+      - name: 📥 Install coverlet.console
+        run: dotnet tool install --global coverlet.console
+
       - name: 🧪 Run Unit Tests with Coverage
         run: |
-          dotnet test ./server/tests/UnitTest/UnitTest.csproj \
-            --no-build \
-            --configuration Release \
-            --logger:"trx"
+          coverlet ./server/tests/UnitTest/bin/Release/net8.0/UnitTest.dll \
+            --target "dotnet" \
+            --targetargs "test ./server/tests/UnitTest/UnitTest.csproj --no-build --configuration Release" \
+            --format cobertura \
+            --output ./server/tests/UnitTest/TestResults/coverage.xml
 
       - name: 📁 Upload Coverage Report
         if: always()
@@ -60,12 +67,19 @@ jobs:
       - name: 🛠️ Build solution
         run: dotnet build ./server/api/api.csproj --configuration Release --no-restore
 
-      - name: 🧪 Run Integration Tests
+      - name: 📦 Build Integration Test Project
+        run: dotnet build ./server/tests/IntegrationTest/IntegrationTest.csproj --configuration Release
+
+      - name: 📥 Install coverlet.console
+        run: dotnet tool install --global coverlet.console
+
+      - name: 🧪 Run Integration Tests with Coverage
         run: |
-          dotnet test ./server/tests/IntegrationTest/IntegrationTest.csproj \
-            --no-build \
-            --configuration Release \
-            --logger:"trx"
+          coverlet ./server/tests/IntegrationTest/bin/Release/net8.0/IntegrationTest.dll \
+            --target "dotnet" \
+            --targetargs "test ./server/tests/IntegrationTest/IntegrationTest.csproj --no-build --configuration Release" \
+            --format cobertura \
+            --output ./server/tests/IntegrationTest/TestResults/coverage.xml
 
       - name: 📁 Upload Coverage Report
         if: always()
