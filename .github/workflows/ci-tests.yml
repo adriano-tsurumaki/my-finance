@@ -31,7 +31,6 @@ jobs:
           dotnet test ./server/tests/UnitTest/UnitTest.csproj \
             --no-build \
             --configuration Release \
-            --collect:"XPlat Code Coverage"
             --logger:"trx"
 
       - name: 📁 Upload Coverage Report
@@ -39,9 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unit-test-coverage
-          path: |
-            **/TestResults/**/*.xml
-            **/TestResults/**/*.coverage
+          path: ./server/tests/UnitTest/TestResults/coverage.xml
 
   integration-tests:
     name: 🔁 Integration Tests
@@ -63,18 +60,16 @@ jobs:
       - name: 🛠️ Build solution
         run: dotnet build ./server/api/api.csproj --configuration Release --no-restore
 
-      - name: 🧪 Run Integration Tests with Coverage
+      - name: 🧪 Run Integration Tests
         run: |
           dotnet test ./server/tests/IntegrationTest/IntegrationTest.csproj \
             --no-build \
             --configuration Release \
-            --collect:"XPlat Code Coverage"
+            --logger:"trx"
 
       - name: 📁 Upload Coverage Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: integration-test-coverage
-          path: |
-            **/TestResults/**/*.xml
-            **/TestResults/**/*.coverage
+          path: ./server/tests/IntegrationTest/TestResults/coverage.xml
